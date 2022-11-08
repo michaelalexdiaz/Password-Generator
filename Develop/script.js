@@ -5,6 +5,45 @@ var specialCharacters = [  "@","%","+","\\","/","'","!","#","$","^","?",":",",",
 
 var generateBtn = document.querySelector("#generate");
 
+let userChoice = [];
+let finalPassword = [];
+
+function generatePassword(){
+
+let passwordLength = prompt("How many characters would you like in your password between 8 and 128?");
+
+let confirmUpperCase = confirm("Do you want uppercase letters in your password?");
+
+let confirmLowerCase = confirm("Do you want lowercase letters in your password?");
+
+let confirmNumbers = confirm("Do you want numbers in your password?");
+
+let confirmSpecialCharacters = confirm("Do you want special characters in your password?");
+
+
+  if (confirmUpperCase === true){
+    userChoice = userChoice.concat(upperCaseCharacters)
+  };
+
+  if (confirmLowerCase === true){
+    userChoice = userChoice.concat(lowerCaseCharacters)
+  };
+
+  if (confirmNumbers === true){
+    userChoice = userChoice.concat(numbers)
+  };
+
+  if (confirmSpecialCharacters === true){
+    userChoice = userChoice.concat(specialCharacters)
+  };
+
+  for (var i = 0; i < passwordLength; i++) {
+    finalPassword.push (userChoice[Math.floor(Math.random() * userChoice.length)]);
+  };
+
+  return finalPassword.join("");
+}
+
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
