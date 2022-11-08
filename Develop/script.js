@@ -12,13 +12,13 @@ function generatePassword(){
 
 let passwordLength = prompt("How many characters would you like in your password between 8 and 128?");
 
-let confirmUpperCase = confirm("Do you want uppercase letters in your password?");
+let confirmUpperCase = confirm("Please confirm if you want uppercase letters in your password.");
 
-let confirmLowerCase = confirm("Do you want lowercase letters in your password?");
+let confirmLowerCase = confirm("Please confirm if you want lowercase letters in your password.");
 
-let confirmNumbers = confirm("Do you want numbers in your password?");
+let confirmNumbers = confirm("Please confirm you want numbers in your password.");
 
-let confirmSpecialCharacters = confirm("Do you want special characters in your password?");
+let confirmSpecialCharacters = confirm("please confirm you want special characters in your password.");
 
 
   if (confirmUpperCase === true){
