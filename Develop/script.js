@@ -3,8 +3,6 @@ var lowerCaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k"
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialCharacters = [  "@","%","+","\\","/","'","!","#","$","^","?",":",",",")","(","}","{","]","[","~","-","_",".",];
 
-var generateBtn = document.querySelector("#generate");
-
 let userChoice = [];
 let finalPassword = [];
 
@@ -43,6 +41,8 @@ let confirmSpecialCharacters = confirm("please confirm you want special characte
 
   return finalPassword.join("");
 }
+
+var generateBtn = document.querySelector("#generate");
 
 function writePassword() {
     var password = generatePassword();
